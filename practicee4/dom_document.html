@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Penggunaan DOM</title>
+</head>
+<body>
+    <div id="container">
+        <!-- Elemen akan ditambahkan di sini -->
+    </div>
+    
+    <script>
+        // Membuat elemen <p> dan menambahkan teks ke dalamnya
+        var paragraph = document.createElement('p');
+        paragraph.textContent = 'Ini adalah sebuah paragraf.';
+
+        // Menambahkan elemen <p> ke dalam elemen dengan id 'container' pada halaman HTML
+        var container = document.getElementById('container');
+        container.appendChild(paragraph);
+
+        // Membuat elemen <button> dan menambahkan teks ke dalamnya
+        var button = document.createElement('button');
+        button.textContent = 'Klik Saya';
+
+        // Menambahkan elemen <button> ke dalam elemen dengan id 'container' pada halaman HTML
+        container.appendChild(button);
+
+        // Menambahkan event listener ke elemen <button>
+        button.addEventListener('click', function() {
+            alert('Tombol telah diklik!');
+        });
+    </script>
+</body>
+</html>
