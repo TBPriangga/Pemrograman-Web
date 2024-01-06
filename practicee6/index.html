@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="img/ittp.png" />
+    <title>Album example for Bootstrap</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="collapse bg-dark" id="navbarToggleExternalContent" data-bs-theme="dark">
+        <div class="container-lg">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">
+                Add some information about the album below, the author, or any other background context. Make it a few s entences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or co ntact information.
+              </p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                <li><a href="#" class="text-white">Like on Facebook</a></li>
+                <li><a href="#" class="text-white">Email me</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container-lg d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-camera me-2" viewBox="0 0 16 16">
+              <path
+                d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"
+              />
+              <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
+            </svg>
+            <strong>Album</strong>
+          </a>
+          <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main role="main">
+      <section class="jumbotron text-center bg-light mb-5">
+        <div class="container-lg">
+          <h1 class="jumbotron-heading fw-semibold" id="title-page">Album example</h1>
+          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+          <p>
+            <a href="#" class="btn btn-primary my 2" onClick="getQuotes('https://quotesbeta.tugaskelas.my.id/index.php/quotes/q/my_quote/21102158','My Quotes')">My Quotes</a>
+            <a href="#" class="btn btn-primary my 2" onClick="getQuotes('https://quotesbeta.tugaskelas.my.id/index.php/quotes/q/class_id/3','Class Quotes')">Class Quotes</a>
+            <a href="#" class="btn btn-primary my 2" onClick="getQuotes('https://quotesbeta.tugaskelas.my.id/index.php/quotes','All Quotes')">All Quotes</a>
+          </p>
+        </div>
+      </section>
+      <div class="album py-5 bg-light">
+        <div class="container-lg">
+          <h1 class="jumbotron-heading" id="title-page"></h1>
+          <div class="row" id="quote-items">
+            <div class="col-md-3 quote-item" style="display: none" id="quote-item">
+              <div class="card mb-4 box-shadow" style="width: 20rem">
+                <img class="card-img-top" id="card-img" src="img/No Image.png" alt="Card image cap" />
+                <div class="card-body">
+                  <b class="card-title" id="card-title">Title</b><br />
+                  <small class="text-muted" id="card-name">Nama</small>
+                  <p class="card-text" id="card-description">This is a wider card with supporting text below as a natural lead in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" id="view-detail" class="btn btn-sm btn-outline-secondary">View</button>
+                    </div>
+                    <small class="text-muted" id="card-date">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container-lg">
+        <p class="float-end">
+          <a href="#">Back to top</a>
+        </p>
+        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+        <p>
+          New to Bootstrap? <a href="../../">Visit the homepage</a> or read our
+          <a
+            href="../../getting
+              started/"
+            >getting started guide</a
+          >.
+        </p>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="quoteDetailModal" tabindex="-1" role="dialog" aria-labelledby="quoteDetailLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-title">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img class="card-img-top" src="assets/img/no_image.jpg" id="modal-img" alt="Card image cap" />
+            <p class="card-text" id="modal-description"></p>
+            <small class="text-muted" id="modal-name">Nama</small>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      function getQuotes(url, title) {
+        var item = $("#quote-item");
+        $("#title-page").html(title);
+        $(".quote-item").remove();
+        item.appendTo("#quote-items");
+        $.ajax({
+          type: "GET",
+          url: url,
+          beforeSend: function (xhr) {
+            xhr.overrideMimeType("text/plain; charset=x-user-defined");
+          },
+          error: function (xhr, status, error) {
+            console.log(xhr);
+          },
+        }).done(function (data) {
+          myData = JSON.parse(data);
+          for (i = 0; i < myData["quotes"].length; i++) {
+            var item = $("#quote-item").clone();
+            item.find("#card-description").html(myData["quotes"][i].description);
+            item.removeAttr("style");
+            item.find("#card-img").attr("src", myData["quotes"][i].images);
+            item.find("#card-title").html(myData["quotes"][i].title);
+            item.find("#card-name").html(myData["quotes"][i].name + " (" + myData["quotes"][i].class + ")");
+            item.find("#card-date").html(myData["quotes"][i].updated);
+            item.find("#view-detail").attr("onClick", "callModal('" + myData["quotes"][i].title + "','" + myData["quotes"][i].name + " (" + myData["quotes"][i].class + ")','" + myData["quotes"][i].images + "','" + myData["quotes"][i].description + "')");
+            item.appendTo("#quote-items");
+          }
+        });
+      }
+      $(document).ready(function () {
+        getQuotes("https://quotesbeta.tugaskelas.my.id/index.php/quotes/q/my_quote/21102158", "My Quotes");
+      });
+
+      function callModal(title, name, image, description) {
+        $("#quoteDetailModal").modal("show");
+        $("#modal-title").html(title);
+        $("#modal-name").html(name);
+        $("#modal-description").html(description);
+        $("#modal-img").attr("src", image);
+      }
+    </script>
+  </body>
+</html>
