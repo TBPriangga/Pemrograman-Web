@@ -15,7 +15,8 @@
             <div class="col-md-8 col-xl-6">
                 <h1>Edit Mahasiswa</h1>
                 <hr>
-                <form action="{{ route('student.update',['student' => $student->id]) }}" method="POST">
+                <form action="{{ route('student.update',['student' => $student->id]) }}" method="POST"
+                    enctype="multipart/form-data">
                     @method('PATCH')
                     @csrf
                     <div class="form-group">
@@ -81,6 +82,15 @@
                         <label for="alamat">Alamat</label>
                         <textarea class="form-control" id="alamat" rows="3"
                             name="alamat">{{ old('alamat') ?? $student->address}}</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="image">Gambar Profile</label>
+                        <br><img height="150px" src="{{url('')}}/{{$student->image}}" class="rounded" alt="">
+                        <input type="file" class="form-control-file" id="image" name="image">
+                        @error('image')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <button type="submit" class="btn btn-primary mb-2">Update</button>
                 </form>

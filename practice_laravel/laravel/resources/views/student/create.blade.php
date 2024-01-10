@@ -15,7 +15,7 @@
             <div class="col-md-8 col-xl-6">
                 <h1>Pendaftaran Mahasiswa</h1>
                 <hr>
-                <form action="{{ route('student.store') }}" method="POST">
+                <form action="{{ route('student.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="nim">NIM</label>
@@ -79,6 +79,14 @@
                     <div class="form-group">
                         <label for="alamat">Alamat</label>
                         <textarea class="form-control" id="alamat" rows="3" name="alamat">{{ old('alamat') }}</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="image">Gambar Profile</label>
+                        <input type="file" class="form-control-file" id="image" name="image">
+                        @error('image')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <button type="submit" class="btn btn-primary mb-2">Daftar</button>
                 </form>
