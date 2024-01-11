@@ -29,6 +29,6 @@ Route::delete('/student/{student}', [StudentController::class, 'destroy'])->name
 Route::get('/login', [AdminController::class, 'index'])->name('login.index');
 Route::get('/logout', [AdminController::class, 'logout'])->name('login.logout');
 Route::post('/login', [AdminController::class, 'process'])->name('login.process');
-Route::get('/adminlte/index', [AdminLTEController::class, 'index'])->name('adminlte.index');
-Route::get('/adminlte/student/create', [AdminLTEStudentController::class, 'create'])->name('adminlte.student.create');
+Route::get('/adminlte/index', [AdminLTEController::class, 'index'])->name('adminlte.index')->middleware('login_auth');
+Route::get('/adminlte/student/create', [AdminLTEStudentController::class, 'create'])->name('adminlte.student.create')->middleware('login_auth');
 
